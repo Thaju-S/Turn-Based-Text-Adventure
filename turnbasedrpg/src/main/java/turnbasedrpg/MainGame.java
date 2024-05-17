@@ -6,7 +6,7 @@ public class MainGame
     {
         int choice = 1;
         int turn = 1;
-        PlayerLevel1 player = new PlayerLevel1();        
+        PlayerDay1 player = new PlayerDay1();        
         System.out.println("\nThis is the Border Inspection Game.\n");
         String nInput = UserInput.getString("Enter your name:");
         player.name = (nInput.isBlank() ? "Officer" : nInput);  
@@ -32,7 +32,7 @@ public class MainGame
             System.out.println("Brain Power = "+player.getBrainP() );
 
             if(turn ==8){
-                player = new PlayerLevel2(player);
+                player = new PlayerDay2(player);
             } 
 
 

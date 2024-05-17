@@ -2,7 +2,7 @@ package turnbasedrpg;
 
 import java.util.Random;
 
-public class PlayerLevel1 {
+public class PlayerDay1 {
 
     public String name="";
     private int health=100;
@@ -16,6 +16,7 @@ public class PlayerLevel1 {
         System.out.println("You look around and find some unfinished food in the Caf");
         System.out.println("No one is looking...   ... Yum Yum");
         health +=20;
+        money = money - 1;
     }
  
     public int getHealth(){

@@ -2,16 +2,16 @@ package turnbasedrpg;
 
 import java.util.Random;
 
-public class PlayerLevel2 extends PlayerLevel1{
+public class PlayerDay2 extends PlayerDay1{
     
-    public PlayerLevel2(){
+    public PlayerDay2(){
         super();
         this.bonus=10;
         this.animal = "Lynx";
         System.out.println("After 5 turns you are upgraded to a scout"); 
     }
 
-    public PlayerLevel2(PlayerLevel1 player) {
+    public PlayerDay2(PlayerDay1 player) {
         this();
         this.setHealth(player.getHealth());
         this.setBrainP(player.getBrainP());
