@@ -14,16 +14,16 @@ A small text adventure game where you play as a border inspection officer (defin
 # Troubleshooting
 -Double check if you have the latest versions of Java and Git by going to your terminal and typing the following commands:
 
-    `java --version`
-
-    `git --version`
+```
+java --version
+git --version
+```
 
 -Check the pom.xml file to make sure that all the dependencies are correct
 
--In your terminal, navigate to the directory with the project with this command:
+-In your terminal, navigate to the directory with the project with these commanda (requires having Maven installed in your system):
 
-    `cd <location of the project>`
-
-    Then enter this command (requires having Maven installed in your system):
-
-    `mvn compile`
+```
+cd <location of the project>
+mvn compile
+```
