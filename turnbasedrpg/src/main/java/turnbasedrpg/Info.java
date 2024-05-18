@@ -1,5 +1,7 @@
 package turnbasedrpg;
 
+import java.util.Random;
+
 public class Info {
 
     private Info() {}
@@ -35,4 +37,8 @@ public class Info {
     "Austin",   "Bennett",  "Brent",    "Collins",  "Elliot",
     "Grant",    "Grayson",  "Holland",  "Kendall",  "Lennon"
     };
+
+    public static String getName() {
+        return names[new Random().nextInt(names.length)] + "" + names[new Random().nextInt(names.length)];
+    }
 }
