@@ -40,7 +40,7 @@ if(player.getHealth()<=0){
                 System.out.println("You didn't make it");
                 choice=0;
             }
-            turn +=1;
+            turn += 1;
         }
     }
 }
