@@ -5,7 +5,9 @@ A small text adventure game where you play as a border inspection officer (defin
 1. Make sure you have the latest versions of Java and Git, as well as an IDE that can run Java and Maven (may require installing plugins to support Maven).
 
 2. Go to your terminal and type this command:
-`git clone https://github.com/Thaju-S/Turn-Based-Text-Adventure.git <insert the location of where you want to keep the project here>`
+```
+git clone https://github.com/Thaju-S/Turn-Based-Text-Adventure.git <insert the location of where you want to keep the project here>
+```
 
 3. Import the project into your IDE.
 
@@ -25,5 +27,5 @@ git --version
 
 ```
 cd <location of the project>
-mvn compile
+mvn clean install
 ```
