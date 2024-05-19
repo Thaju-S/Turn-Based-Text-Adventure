@@ -15,14 +15,15 @@ public class Info {
     "  / Austoritrin \\ Poldorea \\\n" +
     " /____________  _|___________\\\n" +
     "|             \\/             /\n" +
-    " \\  Soutatei   \\   Yembia   _|\n" +
+    " \\  New Guino  \\   Yembia   _|\n" +
     " |___     _____/___________/\n" +
     " |   \\___/     |           |\n" +
-    "  \\_Uzbekinada |_  Fijand_ |\n" +
+    "  \\_  Bolippia |_  Fijand_ |\n" +
     "  / \\____________\\______/ \\|\n" +
-    " |       /     |           \\\n" +
-    " |Islaru|Gambia| Colicar __|\n" +
-    " |______|______|________/   \n";
+    " | West | East |           \\\n" +
+    " |Mollia|Mollia| Colicar __|\n" +
+    "  \\_____|___   |________/   \n" +
+    "            \\_/";
 
     public static final String[] names = {
     "Taylor",   "Morgan",   "Jordan",   "Parker",   "Cameron", 
@@ -38,7 +39,10 @@ public class Info {
     "Grant",    "Grayson",  "Holland",  "Kendall",  "Lennon"
     };
 
-    public static String getName() {
-        return names[new Random().nextInt(names.length)] + "" + names[new Random().nextInt(names.length)];
+    public static String createName() {
+        if (new Random().nextInt(3) == 0) {
+            return names[new Random().nextInt(names.length)] + " " + names[new Random().nextInt(names.length)] + " " + names[new Random().nextInt(names.length)];
+        }
+        return names[new Random().nextInt(names.length)] + " " + names[new Random().nextInt(names.length)];
     }
 }

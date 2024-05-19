@@ -6,6 +6,7 @@ public class MainGame
     {
         int choice = 1;
         int turn = 1;
+        System.out.println(Info.map);
         PlayerDay1 player = new PlayerDay1();        
         System.out.println("\nThis is the Border Inspection Game.\n");
         String nInput = UserInput.getString("Enter your name:");
