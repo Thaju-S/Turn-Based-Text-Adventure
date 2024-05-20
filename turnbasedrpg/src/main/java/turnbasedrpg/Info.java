@@ -45,4 +45,8 @@ public class Info {
         }
         return names[new Random().nextInt(names.length)] + " " + names[new Random().nextInt(names.length)];
     }
+
+    public static int[] getDate() {
+        return new int[] {new Random().nextInt(1,32), new Random().nextInt(1,13), new Random().nextInt(1900,1960)};
+    }
 }
