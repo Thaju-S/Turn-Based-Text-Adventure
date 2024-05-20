@@ -2,7 +2,9 @@ package turnbasedrpg;
 
 import java.util.Random;
 
-public class Info {
+public final class Info {
+
+    private static Random r = new Random();
 
     private Info() {}
 
@@ -21,7 +23,7 @@ public class Info {
     "  \\_  Bolippia |_  Fijand_ |\n" +
     "  / \\____________\\______/ \\|\n" +
     " | West | East |           \\\n" +
-    " |Mollia|Mollia| Colicar __|\n" +
+    " |Mollia|Mollia|  Quebec __|\n" +
     "  \\_____|___   |________/   \n" +
     "            \\_/";
 
@@ -40,13 +42,13 @@ public class Info {
     };
 
     public static String createName() {
-        if (new Random().nextInt(3) == 0) {
-            return names[new Random().nextInt(names.length)] + " " + names[new Random().nextInt(names.length)] + " " + names[new Random().nextInt(names.length)];
+        if (r.nextInt(3) == 0) {
+            return names[r.nextInt(names.length)] + " " + names[r.nextInt(names.length)] + " " + names[r.nextInt(names.length)];
         }
-        return names[new Random().nextInt(names.length)] + " " + names[new Random().nextInt(names.length)];
+        return names[r.nextInt(names.length)] + " " + names[r.nextInt(names.length)];
     }
 
     public static int[] getDate() {
-        return new int[] {new Random().nextInt(1,32), new Random().nextInt(1,13), new Random().nextInt(1900,1960)};
+        return new int[] {r.nextInt(1,32), r.nextInt(1,13), r.nextInt(1900,1960)};
     }
 }
