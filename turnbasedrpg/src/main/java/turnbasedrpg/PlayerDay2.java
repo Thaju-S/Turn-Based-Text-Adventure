@@ -3,24 +3,20 @@ package turnbasedrpg;
 import java.util.Random;
 
 public class PlayerDay2 extends PlayerDay1{
-    
+
     public PlayerDay2(){
         super();
         this.bonus=10;
-        this.animal = "Lynx";
-        System.out.println("After 5 turns you are upgraded to a scout"); 
     }
 
     public PlayerDay2(PlayerDay1 player) {
         this();
         this.setHealth(player.getHealth());
         this.setBrainP(player.getBrainP());
-        System.out.println("You have developed enhance learning skills after 8 turns");
-        System.out.println("Upgraded to Geek");
     }
-    
+
     @Override
-  public void learn(){
+    public void learn(){
       int chance = new Random().nextInt(3);
       System.out.println("The chances are: " + chance);
         if(chance<2){
@@ -33,5 +29,10 @@ public class PlayerDay2 extends PlayerDay1{
             System.out.println("You lost brain power");
             super.setBrainP(super.getBrainP()-5);
         }
-    }    
+    }
+
+    @Override
+    public int getDay() {
+        return 2;
+    }
 }
