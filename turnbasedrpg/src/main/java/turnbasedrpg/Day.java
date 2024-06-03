@@ -25,7 +25,6 @@ public class Day {
             player.setHealth((player.getHealth() - 10));
 
             System.out.println("Health = "+player.getHealth());
-            System.out.println("Brain Power = "+player.getBrainP());
 
             if(player.getHealth()<=0){
                 System.out.println("You didn't make it");
@@ -39,12 +38,13 @@ public class Day {
     }
 
     public static void runHomeDay(PlayerDay1 player) {
-        int choice = 1;
+        int choice = 0;
         int energy = 100;
-        while (energy > 0 && choice != 0) {
+        while (energy > 0 && choice != 1) {
             System.out.println("Options:");
-            System.out.println("1 - l");
-            System.out.println("2 - e");
+            System.out.println("1 - Sleep");
+            System.out.println("2 - Upgrade");
+            System.out.println("3 - Pay Bills");
             System.out.println();
             choice = UserInput.getInteger("Enter choice");
 

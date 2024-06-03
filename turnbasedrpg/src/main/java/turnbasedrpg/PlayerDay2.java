@@ -11,7 +11,6 @@ public class PlayerDay2 extends PlayerDay1{
     public PlayerDay2(PlayerDay1 player) {
         this();
         this.setHealth(player.getHealth());
-        this.setBrainP(player.getBrainP());
         this.setMoney(player.getMoney());
     }
 
@@ -27,12 +26,12 @@ public class PlayerDay2 extends PlayerDay1{
         if(chance<2){
             System.out.println("You found a tutor");
             System.out.println("The extra studying ");
-            super.setBrainP(getBrainP()+20);
+            super.setMoney(getMoney()+20);
         }
         else{
             System.out.println("You started hip hop dancing to polka");
             System.out.println("You lost brain power");
-            super.setBrainP(getBrainP()-5);
+            super.setMoney(getMoney()-5);
         }
     }
 
