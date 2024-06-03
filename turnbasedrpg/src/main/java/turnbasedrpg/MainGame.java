@@ -4,7 +4,7 @@ import java.time.chrono.ThaiBuddhistEra;
 
 public class MainGame
 {
-    public static void main( String[] args )
+    public static void main(String[] args)
     {
         PlayerDay1 player = new PlayerDay1();
 
@@ -15,11 +15,11 @@ public class MainGame
         System.out.println("Hello, " + player.name + ".");
         System.out.println("You are a border inspection officer.");
 
-        WorkDay.runWorkDay(player);
+        Day.runWorkDay(player);
 
         player = new PlayerDay2(player);
 
-        WorkDay.runWorkDay(player);
+        Day.runWorkDay(player);
 
 
     }

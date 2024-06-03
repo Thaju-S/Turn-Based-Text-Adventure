@@ -1,8 +1,16 @@
 package turnbasedrpg;
 
 public class Timer extends Thread{
+
+    private int time;
+
+    public Timer(int time) {
+        this.time = time;
+    }
+
     public void run() {
-        for (int time = 0; time < 300; time++) {
+
+        for (int t = 0; t < time; t++) {
             try {Thread.sleep(1000);} catch (Exception e) {}
         }
     }

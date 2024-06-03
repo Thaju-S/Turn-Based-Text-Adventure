@@ -8,22 +8,16 @@ public class PlayerDay1 {
     private int health=100;
     private int brainP = 100;
     private int money = 0;
-    public int bonus = 0;
 
+    public int getDay() {
+        return 1;
+    }
     public void food(){
 
         System.out.println("You look around and find some unfinished food in the Caf");
         System.out.println("No one is looking...   ... Yum Yum");
         health +=20;
         money = money - 1;
-    }
-
-    public int getHealth(){
-        return health;
-    }
-
-    public void setHealth(int newHealth){
-        health = newHealth;
     }
 
     public void learn(){
@@ -38,7 +32,16 @@ public class PlayerDay1 {
             brainP=brainP - 5;
         }
     }
-    public int getBrainP(){
+
+    public int getHealth(){
+        return health;
+    }
+
+    public void setHealth(int newHealth){
+        health = newHealth;
+    }
+
+    public int getBrainP() {
         return brainP;
     }
 
@@ -46,7 +49,12 @@ public class PlayerDay1 {
         this.brainP=brainP;
     }
 
-    public int getDay() {
-        return 1;
+    public int getMoney() {
+        return money;
     }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
 }
