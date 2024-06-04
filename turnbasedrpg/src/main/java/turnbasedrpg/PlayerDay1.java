@@ -9,6 +9,7 @@ public class PlayerDay1 {
     private int hunger = 100;
     private int heat = 100;
     private int money = 0;
+    private boolean home = true;
 
     public int getDay() {
         return 1;
@@ -63,6 +64,14 @@ public class PlayerDay1 {
 
     public void setHeat(int heat) {
         this.heat = heat;
+    }
+
+    public boolean getHome() {
+        return home;
+    }
+
+    public void setHome(boolean home) {
+        this.home = home;
     }
 
 }

@@ -40,7 +40,15 @@ public class Day {
     public static void runHomeDay(PlayerDay1 player) {
         int choice = 0;
         int energy = 100;
+        int moneySpent;
+        player.setHealth(player.getHealth() - 20);
+        player.setHeat(player.getHeat() - 20);
+        player.setHunger(player.getHunger() - 20);
+        player.setHome(false);
+        System.out.println("You have gotten hungrier, colder, and more unhealthy.");
+
         while (energy > 0 && choice != 1) {
+            moneySpent = 0;
             System.out.println("Options:");
             System.out.println("1 - Sleep");
             System.out.println("2 - Upgrade");
@@ -48,11 +56,38 @@ public class Day {
             System.out.println();
             choice = UserInput.getInteger("Enter choice");
 
-            if (choice == 1){
-                System.out.println("learn");
-            }
             if (choice == 2){
-                System.out.println("food");
+                System.out.println("Options:");
+                System.out.println("1 - ");
+                System.out.println("2 - ");
+                System.out.println("3 - ");
+                System.out.println();
+                choice = UserInput.getInteger("Enter choice");
+            }
+            if (choice == 3){
+                System.out.println("Options:");
+                System.out.println("1 - Rent - $50");
+                System.out.println("2 - Heat - $10");
+                System.out.println("3 - Groceries - $20");
+                System.out.println("4 - Medicine - $5");
+                System.out.println();
+                choice = UserInput.getInteger("Enter choice");
+
+                if (choice == 1) {
+                    moneySpent = 50;
+                }
+                if (choice == 2) {
+                    moneySpent = 10;
+                }
+                if (choice == 3) {
+                    moneySpent = 20;
+                }
+                if (choice == 4) {
+                    moneySpent = 5;
+                }
+
+                player.setMoney(player.getMoney() - moneySpent);
+                System.out.println("You spent $" + moneySpent + ".");
             }
         }
         System.out.println("You went to bed for the day.");
