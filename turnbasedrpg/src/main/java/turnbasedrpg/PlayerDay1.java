@@ -2,9 +2,12 @@ package turnbasedrpg;
 
 import java.util.Random;
 
+import lombok.Data;
+
+@Data
 public class PlayerDay1 {
 
-    public String name = "";
+    private String name = "";
     private int health = 100;
     private int hunger = 100;
     private int heat = 100;
@@ -33,45 +36,6 @@ public class PlayerDay1 {
             System.out.println("Your brain power diminished");
             money -= 5;
         }
-    }
-
-    public int getHealth(){
-        return health;
-    }
-
-    public void setHealth(int newHealth){
-        health = newHealth;
-    }
-
-    public int getMoney() {
-        return money;
-    }
-
-    public void setMoney(int money) {
-        this.money = money;
-    }
-    public int getHunger() {
-        return hunger;
-    }
-
-    public void setHunger(int hunger) {
-        this.hunger = hunger;
-    }
-
-    public int getHeat() {
-        return heat;
-    }
-
-    public void setHeat(int heat) {
-        this.heat = heat;
-    }
-
-    public boolean getHome() {
-        return home;
-    }
-
-    public void setHome(boolean home) {
-        this.home = home;
     }
 
 }

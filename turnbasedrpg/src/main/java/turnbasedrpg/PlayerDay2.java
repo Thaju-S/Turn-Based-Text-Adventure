@@ -14,7 +14,7 @@ public class PlayerDay2 extends PlayerDay1{
         this.setMoney(player.getMoney());
         this.setHunger(player.getHunger());
         this.setHeat(player.getHeat());
-        this.setHome(player.getHome());
+        this.setHome(player.isHome());
     }
 
     @Override

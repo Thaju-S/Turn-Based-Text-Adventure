@@ -10,9 +10,9 @@ public class MainGame
 
         System.out.println("\nThis is the Border Inspection Game.\n");
         String nInput = UserInput.getString("Enter your name:");
-        player.name = (nInput.isBlank() ? "Officer" : nInput);
+        player.setName(nInput.isBlank() ? "Officer" : nInput);
 
-        System.out.println("Hello, " + player.name + ".");
+        System.out.println("Hello, " + player.getName() + ".");
         System.out.println("You are a border inspection officer.");
 
         Day.runWorkDay(player);
