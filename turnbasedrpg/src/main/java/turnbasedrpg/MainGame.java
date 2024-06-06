@@ -15,12 +15,15 @@ public class MainGame
         System.out.println("Hello, " + player.getName() + ".");
         System.out.println("You are a border inspection officer.");
 
-        Day.runWorkDay(player);
+        Work.runWork(player);
+
+        Home.runHome(player);
 
         player = new PlayerDay2(player);
 
-        Day.runWorkDay(player);
+        Work.runWork(player);
 
+        Home.runHome(player);
 
     }
 }

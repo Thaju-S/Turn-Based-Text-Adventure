@@ -13,6 +13,8 @@ public class PlayerDay1 {
     private int heat = 100;
     private int money = 0;
     private boolean home = true;
+    private int oven = 1;
+    private int heater = 1;
 
     public int getDay() {
         return 1;

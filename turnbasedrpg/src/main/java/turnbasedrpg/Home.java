@@ -2,70 +2,51 @@ package turnbasedrpg;
 
 import java.util.Random;
 
-public class Day {
+public class Home {
 
-    public static void runWorkDay(PlayerDay1 player) {
-        Random r = new Random();
-        int choice = 1;
-        Timer t = new Timer(300);
-        t.start();
-        while(t.getState() != Thread.State.TERMINATED && choice != 0){
-
-            System.out.println("Options:");
-            System.out.println("1 - learn");
-            System.out.println("2 - eat and sleep");
-            System.out.println();
-            choice = UserInput.getInteger("Enter choice");
-
-            if (choice == 1){
-                player.learn();
-            }
-
-            if (choice == 2){
-                player.food();
-            }
-
-            player.setHealth((player.getHealth() - 10));
-
-            System.out.println("Health = "+player.getHealth());
-
-            if(player.getHealth()<=0){
-                System.out.println("You didn't make it");
-                choice=0;
-            }
-        }
-        System.out.println("\nThe day has ended.\n");
-        if (player.getDay() != 5) {
-            runHomeDay(player);
-        }
+    public static void printHomeStats(PlayerDay1 player, int energy) {
+        System.out.println();
+        System.out.println("Health - " + player.getHealth());
+        System.out.println("Hunger - " + player.getHunger());
+        System.out.println("Heat - " + player.getHeat());
+        System.out.println("Energy - " + energy);
     }
 
-    public static void runHomeDay(PlayerDay1 player) {
+    public static void runHome(PlayerDay1 player) {
+
+        System.out.println("You have returned home.");
+
         Random r = new Random();
         int choice = 0;
         int subChoice = 0;
         int energy = 100;
+        int food = 0;
         int moneySpent;
+
+        printHomeStats(player, energy);
+
         player.setHealth(player.getHealth() - r.nextInt(10,20));
         player.setHeat(player.getHeat() - r.nextInt(10,20));
         player.setHunger(player.getHunger() - r.nextInt(10,20));
         player.setHome(false);
-        System.out.println("You have gotten hungrier, colder, and more unhealthy.");
+
+        printHomeStats(player, energy);
 
         while (energy > 0 && choice != 1) {
             moneySpent = 0;
+            System.out.println();
             System.out.println("Options:");
             System.out.println("1 - Sleep");
             System.out.println("2 - Upgrade");
             System.out.println("3 - Pay Bills");
+            System.out.println("4 - Cook");
             System.out.println();
             choice = UserInput.getInteger("Enter choice");
 
             if (choice == 2){
                 System.out.println("Options:");
-                System.out.println("1 - Oven - $100");
-                System.out.println("2 - ");
-                System.out.println("3 - ");
+                System.out.println("1 - Oven - " + (player.getOven() >= 3 ? "Already bought" : 100 * player.getOven()));
+                System.out.println("2 - Heater - " + (player.getHeater() >= 3 ? "Already bought" : 100 * player.getHeater()));
                 System.out.println();
                 subChoice = UserInput.getInteger("Enter choice");
             }
@@ -91,12 +72,12 @@ public class Day {
                     switch (subChoice) {
                         case 1 -> player.setHome(true);
                         case 2 -> player.setHeat(player.getHeat() + 15);
-                        case 3 -> moneySpent = 20;
-                        case 4 -> moneySpent = 50;
-                }
+                        case 3 -> food += 10;
+                        case 4 -> player.setHealth(player.getHealth() + 15);
+                    }
                 }
                 else {
-
+                    System.out.println("You do not have enough money.");
                 }
 
             }
