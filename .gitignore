@@ -1,7 +1,9 @@
 target/
 turnbasedrpg/target/
-turnbasedrpg/src/test/
-test/java/turnbasedrpg/
+turnbasedrpg/src/test
+test/java/turnbasedrpg
+/test/
+turnbasedrpg/src/test/java/turnbasedrpg/AppTest.java
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
