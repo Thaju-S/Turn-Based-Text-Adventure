@@ -10,12 +10,12 @@ public class Work {
 
         Random r = new Random();
         int choice = 1;
-        Timer t = new Timer(300);
+        Timer t = new Timer(300 + r.nextInt(0,1));
         t.start();
+
         while(t.getState() != Thread.State.TERMINATED && choice != 0){
 
-            System.out.println();
-            System.out.println("Options:");
+            System.out.println("\nOptions:");
             System.out.println("1 - learn");
             System.out.println("2 - eat and sleep");
             System.out.println();
