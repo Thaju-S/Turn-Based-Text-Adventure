@@ -16,7 +16,7 @@ git clone https://github.com/Thaju-S/Turn-Based-Text-Adventure.git
 
 4. If the project doesn't work due to unrecognized symbols, go to the terminal in the IDE and run this code:
 ```
-cd <path of the turnbasedrpg file without the arrows>
+cd /path/of/the/turnbasedrpg/folder/
 mvn clean install
 ```
 
