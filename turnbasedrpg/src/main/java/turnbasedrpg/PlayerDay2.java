@@ -1,7 +1,5 @@
 package turnbasedrpg;
 
-import java.util.Random;
-
 public class PlayerDay2 extends PlayerDay1{
 
     public PlayerDay2(){

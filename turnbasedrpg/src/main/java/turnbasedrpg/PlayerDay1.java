@@ -15,7 +15,10 @@ public class PlayerDay1 {
     private int day = 1;
 
     public String getPassportInfo(Passport passport) {
-        return "Name: " + passport.getName() + "\nDate: " + passport.getDateString();
+        return
+        "Name: " + passport.getName() +
+        "\nDate: " + passport.getDateString() +
+        "\nNumber: " + passport.getNumber();
     }
 
     public String getMap() {

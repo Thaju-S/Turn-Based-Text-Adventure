@@ -59,6 +59,10 @@ public final class Info {
         return new int[] {r.nextInt(1,32), r.nextInt(1,13), r.nextInt(1900,1960)};
     }
 
+    public static int[] getDate(int startYear, int endYear) {
+        return new int[] {r.nextInt(1,32), r.nextInt(1,13), r.nextInt(1900,1960)};
+    }
+
     public static int[] getTodayDate(PlayerDay1 player) {
         return new int[] {11 + player.getDay(), 11, 1984};
     }
