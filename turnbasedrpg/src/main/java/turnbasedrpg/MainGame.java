@@ -13,7 +13,7 @@ public class MainGame
         player.setName(nInput.isBlank() ? "Officer" : nInput);
 
         System.out.println("Hello, " + player.getName() + ".\n");
-        System.out.println("You are a border inspection officer.");
+        System.out.println("You are a border inspection officer for the country of Yembia.");
         System.out.println("Your job is to inspect the identification of immigrants and confirm that they are valid.");
         System.out.println("Each shift last 3 real life minutes, and each immigrant you successfully deal with earns you $20.");
         System.out.println("Your ultimate goal is to get through 5 days by paying rent on time and maintaining your health.");

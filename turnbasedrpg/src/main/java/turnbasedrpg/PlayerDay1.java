@@ -14,10 +14,15 @@ public class PlayerDay1 {
     private int heater = 1;
     private int day = 1;
 
-    public void food(){
+    public String getPassportInfo(Passport passport) {
+        return "Name: " + passport.getName() + "\nDate: " + passport.getDateString();
     }
 
-    public void learn(){
+    public String getMap() {
+        return Info.map;
+    }
+
+    public void checkIfCorrectChoice(boolean choice, Immigrant immigrant) {
     }
 
 }

@@ -17,10 +17,10 @@ public final class Info {
     "  / Austoritrin \\ Poldorea \\\n" +
     " /____________  _|___________\\\n" +
     "|             \\/             /\n" +
-    " \\  New Guino  \\   Yembia   _|\n" +
+    " \\  New Guino  \\   Yembia   /\n" +
     " |___     _____/___________/\n" +
     " |   \\___/     |           |\n" +
-    "  \\_  Bolippia |_  Fijand_ |\n" +
+    "  \\_  Bolipia  |_  Fijand_ |\n" +
     "  / \\____________\\______/ \\|\n" +
     " | West | East |           \\\n" +
     " |Mollia|Mollia|  Quebec __|\n" +
@@ -28,17 +28,24 @@ public final class Info {
     "            \\_/";
 
     public static final String[] names = {
-    "Taylor",   "Morgan",   "Jordan",   "Parker",   "Cameron", 
+    "Taylor",   "Morgan",   "Jordan",   "Parker",   "Cameron",
     "Reed",     "Hayden",   "Blake",    "Logan",    "Hunter",
     "Quinn",    "Drew",     "Bailey",   "Riley",    "Casey",
     "Avery",    "Sydney",   "Marley",   "Brady",    "Ellis",
     "Spencer",  "Sawyer",   "Harper",   "Mason",    "Brooks",
     "Alex",     "Tyler",    "Dylan",    "Chandler", "Cooper",
-    "Emerson",  "Finley",   "Harrison", "Jesse",    "Kennedy", 
+    "Emerson",  "Finley",   "Harrison", "Jesse",    "Kennedy",
     "Lane",     "Marsh",    "Nolan",    "Payton",   "Reagan",
     "Shane",    "Tanner",   "Wade",     "Walker",   "Wyatt",
     "Austin",   "Bennett",  "Brent",    "Collins",  "Elliot",
     "Grant",    "Grayson",  "Holland",  "Kendall",  "Lennon"
+    };
+
+    public static final String[] months = {
+        "January", "February", "March",
+        "April", "May", "June",
+        "July", "August", "September",
+        "October", "November", "December"
     };
 
     public static String createName() {
@@ -50,5 +57,13 @@ public final class Info {
 
     public static int[] getDate() {
         return new int[] {r.nextInt(1,32), r.nextInt(1,13), r.nextInt(1900,1960)};
+    }
+
+    public static int[] getTodayDate(PlayerDay1 player) {
+        return new int[] {11 + player.getDay(), 11, 1984};
+    }
+
+    public static String getDateString(int[] date) {
+        return months[date[1] - 1] + " " + date[0] + ", " + date[2];
     }
 }
