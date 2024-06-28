@@ -8,17 +8,17 @@ import lombok.Getter;
 public class Passport {
 
     private String name;
-    private int[] date;
+    private int[] birthDate;
+    private int[] expireDate;
     private int number;
+    private String countryOrigin;
 
     public Passport() {
         this.name = Info.createName();
-        this.date = Info.getDate();
+        this.birthDate = Info.createDate();
+        this.expireDate = Info.createDate(1983, 1999);
         this.number = new Random().nextInt(10000, 99999);
-    }
-
-    public String getDateString() {
-        return "" + date[0] + "-" + date[1] + "-" + date[2];
+        this.countryOrigin = Info.getCountry();
     }
 
 }

@@ -7,11 +7,13 @@ public class Immigrant {
 
     private Passport passport;
     private EntryPermit entryPermit;
+    private Visa visa;
 
     public Immigrant() {
-        System.out.println("A new immigrant has arrived.");
+        System.out.println("\nA new immigrant has arrived.");
         passport = new Passport();
-        entryPermit = new EntryPermit();
+        entryPermit = new EntryPermit(passport);
+        visa = new Visa(entryPermit);
     }
 
 }

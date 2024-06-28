@@ -16,7 +16,7 @@ public class Home {
 
     public static void runHome(PlayerDay1 player) {
 
-        System.out.println("You have returned home.");
+        System.out.println("\nYou have returned home.");
 
         Random r = new Random();
         int choice = 0;
@@ -25,9 +25,14 @@ public class Home {
         int moneySpent;
         boolean paidRent = false;
 
-        player.setHealth(player.getHealth() - r.nextInt(10,20));
-        player.setHeat(player.getHeat() - r.nextInt(10,20));
-        player.setHunger(player.getHunger() - r.nextInt(10,20));
+        player.setHealth(player.getHealth() - r.nextInt(10,30));
+        player.setHeat(player.getHeat() - r.nextInt(10,30));
+        player.setHunger(player.getHunger() - r.nextInt(10,30));
+
+        if (player.getHealth() <= 0 || player.getHeat() <= 0 || player.getHunger() <= 0) {
+            System.out.println("You didn't make it'.\nGame Over!");
+            System.exit(0);
+        }
 
         while (energy > 0 && choice != 1) {
 
@@ -76,7 +81,7 @@ public class Home {
             }
             if (choice == 3){
                 System.out.println("Options:");
-                System.out.println("1 - Rent - " + (paidRent ? "Already bought": "$" + 10 * (player.getDay() + 4)));
+                System.out.println("1 - Rent - " + (paidRent ? "Already bought": "$" + 10 * (MainGame.day + 4)));
                 System.out.println("2 - Heat - $10");
                 System.out.println("3 - Groceries - $20");
                 System.out.println("4 - Medicine - $5");
@@ -84,10 +89,10 @@ public class Home {
                 subChoice = UserInput.getInteger("Enter choice");
 
                 switch (subChoice) {
-                    case 1 -> moneySpent = 10 * (player.getDay() + 4);
+                    case 1 -> moneySpent = 10 * (MainGame.day + 4);
                     case 2 -> moneySpent = 10;
                     case 3 -> moneySpent = 20;
-                    case 4 -> moneySpent = 50;
+                    case 4 -> moneySpent = 5;
                 }
 
                 if (player.getMoney() >= moneySpent) {

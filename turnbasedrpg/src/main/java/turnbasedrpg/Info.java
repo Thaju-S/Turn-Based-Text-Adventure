@@ -27,6 +27,12 @@ public final class Info {
     "  \\_____|___   |________/   \n" +
     "            \\_/";
 
+    public static final String[] countries = {
+        "Morrand", "Austoritrin", "Polderea",
+        "New Guino", "Bolipia", "Fijand",
+        "West Mollia", "East Mollia", "Quebec"
+    };
+
     public static final String[] names = {
     "Taylor",   "Morgan",   "Jordan",   "Parker",   "Cameron",
     "Reed",     "Hayden",   "Blake",    "Logan",    "Hunter",
@@ -48,6 +54,14 @@ public final class Info {
         "October", "November", "December"
     };
 
+    public static final String[] travel = {
+        "Visit", "Work", "Study", "Tourism"
+    };
+
+    public static String getCountry() {
+        return countries[r.nextInt(countries.length)];
+    }
+
     public static String createName() {
         if (r.nextInt(3) == 0) {
             return names[r.nextInt(names.length)] + " " + names[r.nextInt(names.length)] + " " + names[r.nextInt(names.length)];
@@ -55,16 +69,16 @@ public final class Info {
         return names[r.nextInt(names.length)] + " " + names[r.nextInt(names.length)];
     }
 
-    public static int[] getDate() {
+    public static int[] createDate() {
         return new int[] {r.nextInt(1,32), r.nextInt(1,13), r.nextInt(1900,1960)};
     }
 
-    public static int[] getDate(int startYear, int endYear) {
-        return new int[] {r.nextInt(1,32), r.nextInt(1,13), r.nextInt(1900,1960)};
+    public static int[] createDate(int startYear, int endYear) {
+        return new int[] {r.nextInt(1,32), r.nextInt(1,13), r.nextInt(startYear, endYear)};
     }
 
-    public static int[] getTodayDate(PlayerDay1 player) {
-        return new int[] {11 + player.getDay(), 11, 1984};
+    public static int[] getTodayDate(int day) {
+        return new int[] {11 + day, 12, 1984};
     }
 
     public static String getDateString(int[] date) {
