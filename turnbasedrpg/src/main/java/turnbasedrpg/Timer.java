@@ -11,7 +11,10 @@ public class Timer extends Thread{
     public void run() {
 
         for (int t = 0; t < time; t++) {
-            try {Thread.sleep(1000);} catch (Exception e) {}
+            try {
+                Thread.sleep(1000);
+            }
+            catch (Exception e) {}
         }
     }
 }

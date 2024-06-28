@@ -16,11 +16,31 @@ public class EntryPermit {
 
     public EntryPermit(Passport passport) {
         Random r = new Random();
-        this.name = (r.nextInt(15) == 1 ? Info.createName() : passport.getName());
+        if (r.nextInt(15) == 1) {
+            this.name = Info.createName();
+        }
+        else {
+            this.name = passport.getName();
+        }
         this.number = passport.getNumber() + new int[] {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,-1}[r.nextInt(20)];
         this.reason = Info.travel[r.nextInt(Info.travel.length)];
-        this.birthDate = (r.nextInt(15) == 1 ? Info.createDate() : passport.getBirthDate());
-        this.countryOrigin = (r.nextInt(15) == 1 ? Info.getCountry() : passport.getCountryOrigin());
-        this.countryDestination = (r.nextInt(15) == 1 ? Info.getCountry() : "Yembia");
+        if (r.nextInt(15) == 1) {
+            this.birthDate = Info.createDate();
+        }
+        else {
+            this.birthDate = passport.getBirthDate();
+        }
+        if (r.nextInt(15) == 1) {
+            this.countryOrigin = Info.getCountry();
+        }
+        else {
+            this.countryOrigin = passport.getCountryOrigin();
+        }
+        if (r.nextInt(15) == 1) {
+            this.countryDestination = Info.getCountry();
+        }
+        else {
+            this.countryDestination = "Yembia";
+        }
     }
 }

@@ -6,7 +6,9 @@ public class Work {
 
         System.out.println("\n" + Info.getDateString(Info.getTodayDate(MainGame.day)) + ".");
 
-        if (MainGame.day == 2) {System.out.println("\nImmigrants now carry visas.");}
+        if (MainGame.day == 2) {
+            System.out.println("\nImmigrants now carry visas.");
+        }
 
         System.out.println("\nYou have begun your work shift.");
 
@@ -23,7 +25,9 @@ public class Work {
             System.out.println("3 - See Map");
             System.out.println("4 - See Passport");
             System.out.println("5 - See Entry Permit");
-            if (MainGame.day >= 2) {System.out.println("6 - See Visa");}
+            if (MainGame.day >= 2) {
+                System.out.println("6 - See Visa");
+            }
             System.out.println();
             choice = UserInput.getInteger("Enter choice");
 

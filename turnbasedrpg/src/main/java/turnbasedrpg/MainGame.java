@@ -1,13 +1,12 @@
 package turnbasedrpg;
 
 public class MainGame {
-    public static int day;
+
+    public static int day = 1;
 
     public static void main(String[] args)
     {
         PlayerDay1 player = new PlayerDay1();
-
-        day = 1;
 
         System.out.println("\nYou are a border inspection officer for the country of Yembia.");
         System.out.println("Your job is to inspect the documentation of immigrants and confirm that they have no discrepencies.");

@@ -16,7 +16,10 @@ public class Passport {
     public Passport() {
         this.name = Info.createName();
         this.birthDate = Info.createDate();
-        this.expireDate = Info.createDate(1983, 1999);
+        this.expireDate = Info.createDate(1982, 1999);
+        if (this.expireDate[2] == 1984) {
+            this.expireDate[2]--;
+        }
         this.number = new Random().nextInt(10000, 99999);
         this.countryOrigin = Info.getCountry();
     }

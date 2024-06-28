@@ -12,8 +12,18 @@ public class Visa {
 
     public Visa(EntryPermit entryPermit) {
         Random r = new Random();
-        this.type = (r.nextInt(15) == 1 ? Info.travel[r.nextInt(Info.travel.length)] : entryPermit.getReason());
-        this.name = (r.nextInt(15) == 1 ? Info.createName() : entryPermit.getName());
+        if (r.nextInt(15) == 1) {
+            this.type = Info.travel[r.nextInt(Info.travel.length)];
+        }
+        else {
+            this.type = entryPermit.getReason();
+        }
+        if (r.nextInt(15) == 1) {
+            this.name = Info.createName();
+        }
+        else {
+            this.name = entryPermit.getName();
+        }
     }
 
 }
