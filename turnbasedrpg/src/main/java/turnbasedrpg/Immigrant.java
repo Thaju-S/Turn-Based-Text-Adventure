@@ -1,8 +1,5 @@
 package turnbasedrpg;
 
-import lombok.Getter;
-
-@Getter
 public class Immigrant {
 
     private Passport passport;
@@ -14,6 +11,18 @@ public class Immigrant {
         passport = new Passport();
         entryPermit = new EntryPermit(passport);
         visa = new Visa(entryPermit);
+    }
+
+    public Passport getPassport() {
+        return passport;
+    }
+
+    public EntryPermit getEntryPermit() {
+        return entryPermit;
+    }
+
+    public Visa getVisa() {
+        return visa;
     }
 
 }

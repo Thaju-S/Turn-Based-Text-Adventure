@@ -2,9 +2,6 @@ package turnbasedrpg;
 
 import java.util.Random;
 
-import lombok.Getter;
-
-@Getter
 public class EntryPermit {
 
     private String name;
@@ -42,5 +39,29 @@ public class EntryPermit {
         else {
             this.countryDestination = "Yembia";
         }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public int[] getBirthDate() {
+        return birthDate;
+    }
+
+    public String getCountryOrigin() {
+        return countryOrigin;
+    }
+
+    public String getCountryDestination() {
+        return countryDestination;
     }
 }

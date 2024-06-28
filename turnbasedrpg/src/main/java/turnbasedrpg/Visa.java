@@ -2,9 +2,6 @@ package turnbasedrpg;
 
 import java.util.Random;
 
-import lombok.Getter;
-
-@Getter
 public class Visa {
 
     private String type;
@@ -24,6 +21,14 @@ public class Visa {
         else {
             this.name = entryPermit.getName();
         }
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getName() {
+        return name;
     }
 
 }

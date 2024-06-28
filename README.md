@@ -1,5 +1,5 @@
 # Turn-Based-Text-Adventure
-A small text adventure game where you play as a border inspection officer (definitely a completely original idea that isn't at all ripping-off another very popular video game)
+A small text adventure game where you play as a border inspection officer
 
 # How To Install
 1. Make sure you have the latest versions of Java and Maven, as well as an IDE that can run both of them.

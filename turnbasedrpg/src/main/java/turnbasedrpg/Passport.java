@@ -2,9 +2,7 @@ package turnbasedrpg;
 
 import java.util.Random;
 
-import lombok.Getter;
 
-@Getter
 public class Passport {
 
     private String name;
@@ -22,6 +20,26 @@ public class Passport {
         }
         this.number = new Random().nextInt(10000, 99999);
         this.countryOrigin = Info.getCountry();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int[] getBirthDate() {
+        return birthDate;
+    }
+
+    public int[] getExpireDate() {
+        return expireDate;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public String getCountryOrigin() {
+        return countryOrigin;
     }
 
 }

@@ -1,8 +1,5 @@
 package turnbasedrpg;
 
-import lombok.Data;
-
-@Data
 public class PlayerDay1 {
 
     private String name = "";
@@ -12,6 +9,62 @@ public class PlayerDay1 {
     private int money = 0;
     private int oven = 1;
     private int heater = 1;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public int getHunger() {
+        return hunger;
+    }
+
+    public void setHunger(int hunger) {
+        this.hunger = hunger;
+    }
+
+    public int getHeat() {
+        return heat;
+    }
+
+    public void setHeat(int heat) {
+        this.heat = heat;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public int getOven() {
+        return oven;
+    }
+
+    public void setOven(int oven) {
+        this.oven = oven;
+    }
+
+    public int getHeater() {
+        return heater;
+    }
+
+    public void setHeater(int heater) {
+        this.heater = heater;
+    }
 
     public String getPassportInfo(Passport passport) {
         return
